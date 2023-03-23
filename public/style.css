@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222222;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+
+#gameboard {
+    width: 300px;
+    height: 300px;
+    flex-wrap: wrap;
+    display: flex;
+    border: 1px solid white;
+}
+
+.cell{
+    background-color: #222222;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.circle {
+    border: solid 10px #9900ff;
+    outline: 3.5px solid white;
+    outline-offset: -7px;
+    box-shadow: 0 0 8px 4px rgba(185, 100, 241, 0.7),
+                inset 0 0 8px 4px rgba(185, 100, 241, 0.7);
+    border-radius: 50px;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+}
+
+
+.cross {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+
+}
+
+.cross:before {
+    content: "";
+    background-color: #00ff73;
+    border: solid 5px #00ff73;
+    outline: 2px solid white;
+    outline-offset: -6px;
+    border-radius: 50px;
+    box-shadow: 0 0 8px 4px rgb(64, 247, 146, 0.6);
+    height: 100%;
+    position: absolute;
+}
+
+.cross:after {
+    content: "";
+    position: absolute;
+    background-color: #00ff73;
+    border: solid 5px #00ff73;
+    outline: 2px solid white;
+    outline-offset: -6px;
+    border-radius: 50px;
+    box-shadow: 0 0 8px 4px rgb(64, 247, 146, 0.6);
+    height: 100%;
+    transform: rotate(90deg)
+}
+
+#message {
+    transition: all 1s;
+}
+
+.winner--cross {
+    color: #9900ff;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: #00ff73;
+    padding: 0 1rem;
+}
+
+.winner--circle {
+    color: #00ff73;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: #9900ff;
+    padding: 0 1rem;
+}
+
+
+/*------------------------
+// 404 page
+------------------------*/
+
+.goback {
+    text-decoration: none;
+    color: #9900ff;
+    transition: all 1s;
+}
+
+.goback:hover {
+    color: #00ff73;
+}
+
