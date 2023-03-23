@@ -10,6 +10,7 @@ Prochaines fonctionnalités :
 [] compteur de points
 [] message perdu pour les deux
 [] mobile/responsive
+[] 404 
 
 Amélioration du code : 
 [] réduire les if
